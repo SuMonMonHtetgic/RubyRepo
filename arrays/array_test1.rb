@@ -13,8 +13,8 @@
 # puts "________next testing____________"
 # puts ary2
 
-empty_table = Array.new(3) { Array.new(3) }
-puts empty_table
+# empty_table = Array.new(3) { Array.new(3) }
+# puts empty_table
 # output need to confirm, codeacademy 
 
 # arr = [1, 2, 3, 4, 5, 6]
@@ -104,3 +104,8 @@ puts empty_table
 # top_10.each.with_index(1) do | company, index |
 #     puts "#{index}. #{company}"
 # end
+
+numbers = [1, 2, 3, 4, 5]
+numbers.each do |n| 
+    print "#{n * 2 } "
+end
