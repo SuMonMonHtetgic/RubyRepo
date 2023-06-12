@@ -49,24 +49,22 @@ h = Hash.new("Go Fish") #default value when key not exist
 # puts h   #=> {"a"=>9, "b"=>200, "c"=>4}
 # h.store("d", 42) #=> 42
 # puts h   #=> {"a"=>9, "b"=>200, "c"=>4, "d"=>42}
-a = "as".freeze
-b = "ba"
-puts a
-puts b
-h = { a => 100, b => 200 }
-puts h.key(100)
-puts h.key(200)
-puts "key 100 - #{h.key(100).equal? a}"
-puts "key 200 - #{h.key(200).equal? b}"
+# a = "as".freeze
+# b = "ba"
+# puts a
+# puts b
+# h = { a => 100, b => 200 }
+# puts h.key(100)
+# puts h.key(200)
+# puts "key 100 - #{h.key(100).equal? a}"
+# puts "key 200 - #{h.key(200).equal? b}"
 
-hash1 = { key: "value" }
-hash2 = { key: "value" }
-hash3 = hash1
+# hash1 = { key: "value" }
+# hash2 = { key: "value" }
+# hash3 = hash1
 
-puts hash1.equal?(hash2)  # Output: false
-puts hash1.equal?(hash3)  # Output: true
-
-
+# puts hash1.equal?(hash2)  # Output: false
+# puts hash1.equal?(hash3)  # Output: true
 
 # hash = { key1: "value1", key2: "value2" }
 # hash.freeze
@@ -76,7 +74,56 @@ puts hash1.equal?(hash3)  # Output: true
 
 # puts hash
 
-# h = {"colors"  => ["red", "blue", "green"],
-#     "letters" => ["a", "b", "c" ]}
-# h.assoc("letters")  #=> ["letters", ["a", "b", "c"]]
-# h.assoc("foo")      #=> nil
+
+
+# h = {
+#     "colors"  => ["red", "blue", "green"],
+#     "letters" => ["a", "b", "c" ]
+# }
+# letters = h.assoc("letters")
+# colors = h.assoc("colors")
+# print letters
+# print h.assoc("letters") 
+# print h.assoc("colors")  
+# print h.assoc("foo")     
+
+
+# hash = { key1: ["value1.1", "value1.2"], key2: "value2", key3: "value3" }
+
+# result1 = hash.assoc(:key1)
+# result2 = hash.assoc(:key4)
+# print result1
+# puts result1.inspect
+
+# puts result1.inspect  # Output: [:key1, "value1"]
+# puts result2.inspect  # Output: nil
+
+
+# h = { "a" => 100, "b" => 200 }   #=> {"a"=>100, "b"=>200}
+# h.clear 
+# print h
+
+# h = { a: 1, b: false, c: nil }
+# new_h = h.compact     #=> { a: 1, b: false } return the new hash with updated value, without updating the original one
+# puts h 
+# puts new_h
+
+
+# h = { a: 1, b: false, c: nil }
+# h.compact!     #=> { a: 1, b: false } changing the original hash
+# puts h
+
+
+person = {
+    "01" => {name: 'bob', height: '6 ft', weight: '160 lbs', hair: 'brown'},
+    "02" => {name: 'alex', height: '5 ft', weight: '150 lbs', hair: 'black'},
+    "03" => {name: 'steve', height: '7 ft', weight: '180 lbs', hair: 'red'},
+}
+
+person.each do |key, value|
+    puts "No -  #{key}"
+    value.each do |attribute, info|
+      puts "#{attribute} - #{info}"
+    end
+    puts "___________________"
+end
