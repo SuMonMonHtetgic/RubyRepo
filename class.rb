@@ -14,6 +14,9 @@ end
 
 object1 = Language.new('Ruby','method')
 object2 = Language.new('Class','object')
+
+puts object1
+puts object1.inspect
 # we can't access with the class variable directly, need to create method, getter, setter
 puts 'Language name for object1: ' + object1.return_name
 puts 'Topic Name for object1: ' + object1.return_topic
