@@ -18,3 +18,16 @@ max = numbers.uniq.max
 
 puts min
 puts max
+
+require 'date'
+puts Date.today
+
+
+student_grades = {
+    "a" => [56, 67, 78],
+    "b" => [45, 69, 68],
+    "c" => [56, 67, 78],
+}
+for key, value in student_grades
+    puts "#{key} - #{value}"
+end

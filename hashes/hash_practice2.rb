@@ -43,12 +43,12 @@ h = Hash.new("Go Fish") #default value when key not exist
 # puts h2 <= h1   #=> false
 # puts h1 <= h1   #=> true
 
-# h = { "a" => 100, "b" => 200 }
-# h["a"] = 9
-# h["c"] = 4
-# puts h   #=> {"a"=>9, "b"=>200, "c"=>4}
-# h.store("d", 42) #=> 42
-# puts h   #=> {"a"=>9, "b"=>200, "c"=>4, "d"=>42}
+h = { "a" => 100, "b" => 200 }
+h["a"] = 9
+h["c"] = 4
+puts h   #=> {"a"=>9, "b"=>200, "c"=>4}
+h.store("b", 42) #=> 42
+puts h   #=> {"a"=>9, "b"=>200, "c"=>4, "d"=>42}
 # a = "as".freeze
 # b = "ba"
 # puts a

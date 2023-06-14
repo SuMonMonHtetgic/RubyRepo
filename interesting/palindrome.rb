@@ -1,7 +1,8 @@
 def palindrome(str)
-    normalized_str = str.downcase.gsub(/\W+/, '') # Remove non-alphanumeric characters and convert to lowercase
-    
-    if normalized_str == normalized_str.reverse
+    normalized_str = str.downcase.gsub(/\W+/, '') 
+    new_str = str.downcase.gsub(/\W+/, '') 
+    # puts normalized_str
+    if new_str == normalized_str.reverse
         puts "#{str} is palindrome"
     else
         puts "#{str} is not palindrome"
